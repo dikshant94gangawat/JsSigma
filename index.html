@@ -5,14 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div {
+            background-color: aqua;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        span {
+            background-color: red;
+            display: block;
+            height: 200px;
+            width: 200px;
+        }
+
+        button {
+            background-color: white;
+            height: 30px;
+            width: 100px;
+        }
+    </style>
     <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
 
-    <h1 class="first" onclick="clicknow()">down the time</h1>
+    <!-- <h1 class="first" onclick="clicknow()">down the time</h1>
+    <div>
+        <ul>
+            <li class="hero">andrew</li>
+            <li class="hero">smith</li>
+            <li>heron</li>
+            <li>kalig</li>
+            <li>nemit</li>
+            <li>roger</li>
+        </ul>
+    </div> -->
+    <div>
+        <span>
+            <button>click me </button>
+        </span>
+    </div>
+    <script>
+        var a = document.getElementsByTagName('div')[0];
+        var b = document.getElementsByTagName('span')[0];
+        var c = document.getElementsByTagName('button')[0];
+        a.addEventListener('click', () => console.log("div clicked"));
+        b.addEventListener('click', () => console.log("span clicked"));
+        c.addEventListener('click', (event) => { event.stopPropagation(); console.log("button clicked") });
+    </script>
     <script src="./index.js"></script>
-
+    <script src="./dom.js"></script>
 </body>
 
 </html>

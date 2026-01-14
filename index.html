@@ -4,59 +4,672 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        div {
-            background-color: aqua;
-            width: 100%;
-            height: 100%;
-
-        }
-
-        span {
-            background-color: red;
-            display: block;
-            height: 200px;
-            width: 200px;
-        }
-
-        button {
-            background-color: white;
-            height: 30px;
-            width: 100px;
-        }
-    </style>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Weybridge Eye Clinic | Expert Eye Care in Surrey</title>
+    <meta name="description" content="Weybridge Eye Clinic offers comprehensive eye care services including cataract surgery, glaucoma treatment, and routine eye examinations in Surrey.">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">Weybridge</span>
+                    <span class="logo-sub">Eye Clinic</span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="tel:+441onal932821221" class="phone-link">
+                    <i class="fas fa-phone"></i>
+                    <span>01onal 932 821221</span>
+                </a>
+                <a href="#book" class="btn btn-primary">Book Appointment</a>
+            </div>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
 
-    <!-- <h1 class="first" onclick="clicknow()">down the time</h1>
-    <div>
-        <ul>
-            <li class="hero">andrew</li>
-            <li class="hero">smith</li>
-            <li>heron</li>
-            <li>kalig</li>
-            <li>nemit</li>
-            <li>roger</li>
-        </ul>
-    </div> -->
-    <div>
-        <span>
-            <button>click me </button>
-        </span>
-    </div>
-    <script>
-        var a = document.getElementsByTagName('div')[0];
-        var b = document.getElementsByTagName('span')[0];
-        var c = document.getElementsByTagName('button')[0];
-        a.addEventListener('click', () => console.log("div clicked"));
-        b.addEventListener('click', () => console.log("span clicked"));
-        c.addEventListener('click', (event) => { event.stopPropagation(); console.log("button clicked") });
-    </script>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i>
+                <span>Trusted Eye Care Since 1995</span>
+            </div>
+            <h1>Your Vision, <br><span class="highlight">Our Priority</span></h1>
+            <p class="hero-description">
+                Experience world-class eye care with our team of leading ophthalmologists. 
+                From routine eye exams to advanced surgical procedures, we're committed to 
+                preserving and enhancing your precious gift of sight.
+            </p>
+            <div class="hero-cta">
+                <a href="#book" class="btn btn-primary btn-lg">
+                    <span>Schedule Consultation</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#services" class="btn btn-outline btn-lg">
+                    <span>Explore Services</span>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="25000">25,000+</span>
+                    <span class="stat-label">Patients Treated</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="30">30+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="98">98%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-wrapper">
+                <div class="floating-card card-1">
+                    <i class="fas fa-check-circle"></i>
+                    <span>CQC Registered</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-award"></i>
+                    <span>Award Winning Care</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Features Bar -->
+    <section class="features-bar">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Expert Consultants</h4>
+                        <p>Specialist ophthalmologists</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Advanced Technology</h4>
+                        <p>State-of-the-art equipment</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Quick Appointments</h4>
+                        <p>Minimal waiting times</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="feature-text">
+                        <h4>Patient-Centered</h4>
+                        <p>Personalized care plans</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Services</span>
+                <h2>Comprehensive Eye Care <span class="highlight">Solutions</span></h2>
+                <p>From preventive care to advanced surgical treatments, we offer a complete range of ophthalmology services tailored to your needs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Cataract Surgery</h3>
+                    <p>Advanced phacoemulsification surgery with premium lens implants for crystal-clear vision restoration.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Same-day procedure</li>
+                        <li><i class="fas fa-check"></i> Premium IOL options</li>
+                        <li><i class="fas fa-check"></i> Rapid recovery</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <h3>Laser Eye Surgery</h3>
+                    <p>LASIK and LASEK procedures to correct short-sightedness, long-sightedness, and astigmatism.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Freedom from glasses</li>
+                        <li><i class="fas fa-check"></i> Quick procedure</li>
+                        <li><i class="fas fa-check"></i> Life-changing results</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Glaucoma Treatment</h3>
+                    <p>Comprehensive glaucoma management including medication, laser therapy, and surgical intervention.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Early detection</li>
+                        <li><i class="fas fa-check"></i> Pressure monitoring</li>
+                        <li><i class="fas fa-check"></i> Advanced treatments</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Macular Degeneration</h3>
+                    <p>Expert diagnosis and treatment of AMD with anti-VEGF injections and monitoring.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> OCT scanning</li>
+                        <li><i class="fas fa-check"></i> Injection therapy</li>
+                        <li><i class="fas fa-check"></i> Ongoing monitoring</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Paediatric Eye Care</h3>
+                    <p>Specialized eye care for children including squint correction and amblyopia treatment.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Child-friendly</li>
+                        <li><i class="fas fa-check"></i> Early intervention</li>
+                        <li><i class="fas fa-check"></i> Expert paediatric care</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Eye Examinations</h3>
+                    <p>Comprehensive eye health assessments using the latest diagnostic technology.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Full eye health check</li>
+                        <li><i class="fas fa-check"></i> Prescription updates</li>
+                        <li><i class="fas fa-check"></i> Disease screening</li>
+                    </ul>
+                    <a href="#" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-images">
+                    <div class="image-main">
+                        <div class="image-placeholder clinic-image">
+                            <i class="fas fa-hospital"></i>
+                            <span>Modern Clinic Facility</span>
+                        </div>
+                    </div>
+                    <div class="image-secondary">
+                        <div class="image-placeholder equipment-image">
+                            <i class="fas fa-microscope"></i>
+                            <span>Advanced Equipment</span>
+                        </div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="years">30+</span>
+                        <span class="text">Years of Excellence</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-badge">About Us</span>
+                    <h2>Leading Eye Care in <span class="highlight">Surrey</span></h2>
+                    <p class="lead">Weybridge Eye Clinic has been at the forefront of ophthalmic care since 1995, combining clinical excellence with genuine compassion for every patient.</p>
+                    <p>Our clinic brings together a team of highly qualified consultant ophthalmologists, each specializing in different aspects of eye care. We pride ourselves on delivering personalized treatment plans using the most advanced technology available.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>CQC Registered</h4>
+                                <p>Fully regulated and regularly inspected to ensure the highest standards of care.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-hand-holding-medical"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Insurance Accepted</h4>
+                                <p>We work with all major health insurance providers for your convenience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Get in Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Specialists</span>
+                <h2>Meet Our Expert <span class="highlight">Team</span></h2>
+                <p>Our consultants are leaders in their fields, bringing decades of combined experience to provide you with the best possible care.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <div class="image-placeholder doctor-image">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Mr. James Harrison</h3>
+                        <span class="role">Lead Consultant Ophthalmologist</span>
+                        <p>Specialist in cataract surgery and refractive lens exchange with over 20 years experience.</p>
+                        <div class="team-specialties">
+                            <span>Cataracts</span>
+                            <span>Refractive Surgery</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <div class="image-placeholder doctor-image">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Sarah Mitchell</h3>
+                        <span class="role">Glaucoma Specialist</span>
+                        <p>Expert in glaucoma diagnosis and treatment, including advanced surgical techniques.</p>
+                        <div class="team-specialties">
+                            <span>Glaucoma</span>
+                            <span>Laser Treatment</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-image">
+                        <div class="image-placeholder doctor-image">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Mr. David Chen</h3>
+                        <span class="role">Retinal Specialist</span>
+                        <p>Specializing in macular degeneration, diabetic retinopathy, and vitreoretinal surgery.</p>
+                        <div class="team-specialties">
+                            <span>Retina</span>
+                            <span>Macular Disease</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header light">
+                <span class="section-badge">Testimonials</span>
+                <h2>What Our Patients <span class="highlight">Say</span></h2>
+                <p>Don't just take our word for it – hear from patients who have experienced our care firsthand.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I had my cataract surgery here and the experience was exceptional. From the initial consultation to the post-operative care, everything was handled professionally. I can see clearly now for the first time in years!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Margaret Thompson</h4>
+                            <span>Cataract Surgery Patient</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The team at Weybridge Eye Clinic diagnosed my glaucoma early and have been managing it brilliantly. Their expertise and regular monitoring have given me peace of mind about my vision."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Robert Williams</h4>
+                            <span>Glaucoma Patient</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"After my laser eye surgery, I'm free from glasses for the first time in 30 years! The consultation was thorough, the procedure was quick, and the results exceeded my expectations."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Jennifer Clarke</h4>
+                            <span>LASIK Patient</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-cta">
+                <div class="rating-summary">
+                    <div class="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span>4.9/5 based on 500+ reviews</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready to See <span class="highlight">Clearly?</span></h2>
+                    <p>Take the first step towards better vision. Book your consultation today and let our experts guide you towards optimal eye health.</p>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#book" class="btn btn-white btn-lg">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Book Appointment</span>
+                    </a>
+                    <a href="tel:+441932821221" class="btn btn-outline-white btn-lg">
+                        <i class="fas fa-phone"></i>
+                        <span>01932 821221</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-badge">Contact Us</span>
+                    <h2>Get in <span class="highlight">Touch</span></h2>
+                    <p>We're here to answer your questions and help you schedule your appointment. Reach out to us through any of the channels below.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Visit Us</h4>
+                                <p>Weybridge Eye Clinic<br>
+                                123 High Street<br>
+                                Weybridge, Surrey KT13 8AB</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Call Us</h4>
+                                <p><a href="tel:+441932821221">01932 821221</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email Us</h4>
+                                <p><a href="mailto:info@weybridgeeyeclinic.co.uk">info@weybridgeeyeclinic.co.uk</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Opening Hours</h4>
+                                <p>Monday - Friday: 8:30am - 6:00pm<br>
+                                Saturday: 9:00am - 1:00pm<br>
+                                Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper" id="book">
+                    <form class="contact-form">
+                        <h3>Book an Appointment</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Required</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="consultation">General Consultation</option>
+                                <option value="cataract">Cataract Assessment</option>
+                                <option value="glaucoma">Glaucoma Check</option>
+                                <option value="laser">Laser Eye Surgery Consultation</option>
+                                <option value="macular">Macular Assessment</option>
+                                <option value="paediatric">Paediatric Eye Care</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Information</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Please provide any relevant details about your enquiry..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span>Request Appointment</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <p class="form-note">We'll get back to you within 24 hours to confirm your appointment.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-placeholder">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Interactive Map - Weybridge Eye Clinic Location</span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">Weybridge</span>
+                            <span class="logo-sub">Eye Clinic</span>
+                        </div>
+                    </a>
+                    <p>Providing expert eye care in Surrey for over 30 years. Our mission is to preserve and enhance your vision through clinical excellence and compassionate care.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Cataract Surgery</a></li>
+                        <li><a href="#">Laser Eye Surgery</a></li>
+                        <li><a href="#">Glaucoma Treatment</a></li>
+                        <li><a href="#">Macular Degeneration</a></li>
+                        <li><a href="#">Eye Examinations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 High Street, Weybridge, Surrey KT13 8AB</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+441932821221">01932 821221</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@weybridgeeyeclinic.co.uk">info@weybridgeeyeclinic.co.uk</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2026 Weybridge Eye Clinic. All rights reserved.</p>
+                </div>
+                <div class="footer-policies">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="./index.js"></script>
-    <script src="./dom.js"></script>
 </body>
 
 </html>

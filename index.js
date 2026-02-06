@@ -1,469 +1,510 @@
-// var x,y,z;
-// function clicknow(x,y,...z){
-//    console.log(x,y,z)
+/* ============================================
+   WEYBRIDGE EYE CLINIC - JavaScript Interactions
+   ============================================ */
 
-// }
-// console.log(clicknow(2,3,4,4,3,5,6,5));
-
-
-//arrow function and self invoking function
-
-// let hello;
-// (hello = (x,b)=>{var x = 10;
-//     var b = 10;  c=x+b; console.log(c);})();
-
-// (function myname(x,b) {
-//     return c=x+b;
-// })(x,b);
-// console.log(c);
-
-//normal function vs constructor function see below explanation 
-
-//https://stackoverflow.com/questions/22401553/what-are-all-the-differences-between-function-and-constructor-function-in-javasc
-
-// concept of this keyword
-//https://www.programiz.com/javascript/this
-
-
-//array
-//unshift - to add at start of array(first element)
-//push, splice method - 
-// let a = [1, 2, 3, 4];
-// a.splice(1, 1, "12"); // index, deletecount, no to add
-// console.log(a);
-
-
-//foreach loop
-// let number1 = [2,4,5,6,9];
-// number1.forEach((val,index,array)=>{
-// console.log(val,index,array);
-// })
-
-
-
-//for in and for of loop
-//for in loop on array always gives index
-// let ab = [15,24,3,4,5];
-
-
-// for(let index in ab)
-// {
-//     console.log(ab[index]);
-// }
-
-
-//for of loop gives value on array
-// let a = [10,20,3,4,5];
-// for(let i of a)
-// {
-//     console.log(i);
-// }
-
-
-//array destructuring
-// let number1 = [2,4,5,6,9];
-// let [b1,b2,...b3] = number1;
-// b3.forEach((val)=>{
-// console.log(val);
-// })
-
-
-//objects in javascript
-
-// let user = {
-//     "name" : "dikshant",//value if string should be in quotes, key can be in quotes or without quotes it works fine
-//     "age" : 29,
-//     "last name" : "gangawat",
-//     arr:[1,2,3],
-//     fun:function(){
-//         console.log("ram");
-//     }
-// }
-// console.log(user.name);
-// console.log(user["age"]);
-// console.log(user["last name"]); // accesing when there is space in key name
-// console.log(user.arr);
-// user.fun();
-// user.key = "item";
-// let a = "destiny";
-// user[a] = "zero";
-//user for in loop for objects iteration and for of loop for
-
-//objects inside an array
-//for in returns index and for of returns value on that index
-
-// let arr = [
-//     {name : "dikshant",age : 20},
-//     {name : "dikshant1",age : 21},
-//     {name : "dikshant2",age : 22},
-//     {name : "dikshant3",age : 23},
-// ]
-// console.log(arr);
-// let [{name}, b2, {age}] = arr;
-// console.log(name);
-
-
-
-//object destructuring
-
-// let arr = 
-//     {name : "dikshant",age : 20}
- 
-
-
-// let {name:d1,age:d2} = arr;
-// console.log(d1);
-
-//foreach loop on objects
-// const obj = {
-//     name: 'Jean-Luc Picard',
-//     rank: 'Captain'
-//   };
-  
-//   // Prints "name Jean-Luc Picard" followed by "rank Captain"
-//   Object.values(obj).forEach((val,index) => {
-//     console.log(val);
-//   });
-  
-
-//map array function
-
-// let ab = [1,2,3,4,5];
-// let b = ab.map(test);
-
-// console.log(b);
-
-// function test(z){
-// return z*10;
-// }
-
-//map as set
-
-// let ab = new Map([['fname', 'dikshant'],['lname', "gangawat"],[29,'age']]);
-// console.log(ab.has('fname'));
-// console.log(ab.get('fname'));
-// console.log(Array.isArray(ab));
-// console.log(typeof ab);
-// console.log(ab.get(29));
-// ab.set('fname', 'raja');
-// console.log(ab);
-
-//new keyword
-
-// function fun(){
-//     
-//     let fname = "dikshant";
-//     this.fname = fname;
- 
-
-// }
-//  let d1 = new fun();
-//  console.log(d1.fname);
-
-
-//recursion function -  example factorial of a number
-
-// let z;
-
-// function calculate(n){
-//     if(n==0){
-//         return 1;
-//     }
-//     else {
-//      z =  n*calculate(n-1);
-//     return z;
+document.addEventListener('DOMContentLoaded', function() {
     
-//     }
-// }
-
-// calculate(2);
-
-// console.log(z);
-
-
-//callback function
-
-
-// function show(result){
-//     console.log(result);
-// }
-
-// function calculate(x,y,callback){
-//     let z =  x+y;
-//     callback(z);
-//      z = z+2;
+    // ============================================
+    // NAVBAR SCROLL EFFECT
+    // ============================================
+    const navbar = document.querySelector('.navbar');
+    let lastScroll = 0;
     
-// }
-
-// calculate(2,3,show);
-
-//callback hell - 3 functions,,,,,,, Callbacks, Promises, and Async/Await provides us different approaches towards handling asynchronous operations in JavaScript. While callbacks are simple but prone to callback hell, Promises and Async/Await provide cleaner and more readable code structures.
-
-// function a(){
-//    return new Promise((resolve,reject)=>
-//        setTimeout(() => {
-//         console.log("hello one");
-//         resolve();
-
-//     }, 4000));
-// }
-
-// function b(){
-//     return new Promise((resolve,reject)=>
-//     setTimeout(() => {
-//      console.log("hello two");
-//     //  reject("error: not fulfilled");
-// resolve();
-//  }, 2000));
-   
-// }
-
-// function c(){
-
-//     return new Promise((resolve,reject)=>
-//     setTimeout(() => {
-//      console.log("hello three");
-//      resolve();
-
-//  }, 3000));
-// }
-// function d(){
-
-//     return new Promise((resolve,reject)=>
-//     setTimeout(() => {
-//      console.log("hello four");
-//      reject("Error : stopped in d");
-
-//  }, 2000));
-// }
-// c().then(b).then(a).catch((err)=>{
-//     console.log(err);
-// })
-
-//async await ex
-
-// function ex(){ //2-3-1
-//     c();
-//     b();
-   
-//     a();
-// }
-
-// ex();
-
-// async function ex(){  //3-1-2
-//     await  c();
-//     await a();
-//    await d();
-  
-// }
-
-// ex().then(b).catch((err)=>{
-//     console.log(err);
-// });
-
-
-//promises in javascript basic code
-
-// function fun(task){
-
-//     return new Promise((resolve,reject)=>{
-
-//         if(task){
-//             resolve("complete");
-
-//         }
-//         else{
-//             reject("pending or not completed");
-//         }
-
-//     })
-// }
-
-// let onResolve = (res)=>{
-//     console.log(res);
-// }
-// let onReject = (err)=>{
-//     console.log(err);
-// }
-
-// fun(true).then(onResolve).catch(onReject);
-
-//async await
-// function ex(){
-//     a();
-//     b();
-//     c();
-// }
-
-// ex();
-// function a(callback){
-  
-//          console.log("hello one");
-//        callback();
-//  }
- 
-//  function b(){
-  
-//       console.log("hello two");
-
+    function handleNavbarScroll() {
+        const currentScroll = window.pageYOffset;
+        
+        // Add shadow on scroll
+        if (currentScroll > 50) {
+            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+        } else {
+            navbar.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+        }
+        
+        lastScroll = currentScroll;
+    }
     
-//  }
- 
-//  function c(){
- 
-     
-//       console.log("hello three");
-  
-//  }
-// a(function(){
-//  c();
-//  b();
-// });
-
-
-
-//call, apply, bind examples
-
-// function sum(...args){
-
-//     console.log(args);
-//     for(let index of args){
-//         let x = index ;
-//         let y = x+1;
-//         var z = y+x;
-//     }
- 
-//  console.log(z + "" + this.fname);
- 
-// }
-
-// let obj1 = {
-//     fname: "dikshant"
-// }
-
-// let obj2 = {
-//     fname: "Mr Bond"
-// }
-
-// // sum.call(obj1,2,3,4);
-
-// // sum.apply(obj1,[2,3,4]);
-
-// var f = sum.bind(obj1,2,3,4);
-// console.log(typeof f);
-// f();
-
-
-
-//new topic - property flags and descriptors
-
-// let emp = {};
-// emp.name = "dikshant";
-// console.log(Object.getOwnPropertyDescriptor(emp,"name"));
-
-// Object.defineProperty(emp,"age",{
-//     value : 21,
-//     writable: true, enumerable: true, configurable: true
-// })
-
-// console.log(emp);
-
-
-
-//new topic - proto and prototype
-
-//proto
-//ex - 1
-// var obj1 = {
-//     fname: "dikshant"
-// }
-// var obj2 = {
-//     lname: "sharma",
-// }
-// obj2.__proto__ = obj1;
-// console.log(obj2);
-
-//ex-2
-
-// var obj1 = {
-//     fname: "dikshant"
-// }
-
-// var obj2 = Object.create(obj1);
-// console.log(obj2.fname);
-
-
-// function Person(name,age){
-//    let person1 = Object.create(obj);
-//    person1.name = name;
-//    person1.age = age;
-   
-//    return person1;
-// }
-// var obj  = {
-//     greet(){
-//         console.log(`Hello  ${this.name}`)
-//     }
-// }
-// let user =  Person("dg", 29);
-// console.log(typeof user);
-// console.log(user);
-// console.log(user.greet());
-
-
-//protoype
-
-// function Person(name,age){
-//    this.name = name;
-//    this.age = age;  
-// }
-// Person.prototype.greet = function(){
-//     console.log(`Hello ${this.name}`);
-// }
-
-// let user = new Person("dikshant", 29);
-// console.log(user.greet());
-
-
-//classes in javascript
-
-// class User{
-//     constructor(name,age){
-//        this.name = name;
-//        this.age = age
-//     }
-//     desc(){
-//         console.log("hello" + this.name);
-//     }
-// }
-
-// let user = new User("dikshant",29);
-// console.log(user.desc());
-
-
-//fetch api 
-
-
-//  fetch('https://jsonplaceholder.typicode.com/posts').then((response)=>{
-//     if(!response.ok)
-//     {
-//         throw new Error("error network issue");
-//     }
-//     return response.json();
-
-//  }).then((data)=>Object.values(data).forEach(val=>
-// {
-//     console.log(val.title);
-//  })).catch(err=>console.log(err));
- 
-// fetch('https://jsonplaceholder.typicode.com/posts').then((response)=>{
-//     if(!response.ok)
-//     {
-//         throw new Error("error network issue");
-//     }
-//     return response.json();
-
-//  }).then(data=>
-//     console.log(data)).catch(err=>console.log(err));
- 
+    window.addEventListener('scroll', handleNavbarScroll);
+    
+    // ============================================
+    // MOBILE MENU TOGGLE
+    // ============================================
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+    }
+    
+    // ============================================
+    // SMOOTH SCROLL FOR NAVIGATION LINKS
+    // ============================================
+    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+    
+    smoothScrollLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            if (href !== '#') {
+                e.preventDefault();
+                
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    const navHeight = navbar.offsetHeight;
+                    const targetPosition = targetElement.offsetTop - navHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileToggle.classList.remove('active');
+                    }
+                }
+            }
+        });
+    });
+    
+    // ============================================
+    // ACTIVE NAVIGATION LINK ON SCROLL
+    // ============================================
+    const sections = document.querySelectorAll('section[id]');
+    const navLinkItems = document.querySelectorAll('.nav-links a');
+    
+    function highlightActiveNav() {
+        const scrollPos = window.scrollY + 150;
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                navLinkItems.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${sectionId}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', highlightActiveNav);
+    
+    // ============================================
+    // SCROLL ANIMATIONS (Intersection Observer)
+    // ============================================
+    const animatedElements = document.querySelectorAll('.service-card, .team-card, .testimonial-card, .about-feature, .contact-item');
+    
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    animatedElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(30px)';
+        element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(element);
+    });
+    
+    // ============================================
+    // COUNTER ANIMATION FOR STATS
+    // ============================================
+    const stats = document.querySelectorAll('.stat-number');
+    let statsAnimated = false;
+    
+    function animateCounters() {
+        if (statsAnimated) return;
+        
+        stats.forEach(stat => {
+            const target = parseInt(stat.getAttribute('data-count'));
+            if (!target) return;
+            
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    if (target > 1000) {
+                        stat.textContent = Math.floor(current).toLocaleString() + '+';
+                    } else if (target < 100) {
+                        stat.textContent = Math.floor(current) + (target === 98 ? '%' : '+');
+                    } else {
+                        stat.textContent = Math.floor(current) + '+';
+                    }
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    if (target > 1000) {
+                        stat.textContent = target.toLocaleString() + '+';
+                    } else if (target === 98) {
+                        stat.textContent = target + '%';
+                    } else {
+                        stat.textContent = target + '+';
+                    }
+                }
+            };
+            
+            updateCounter();
+        });
+        
+        statsAnimated = true;
+    }
+    
+    // Trigger counter animation when stats are visible
+    const heroStats = document.querySelector('.hero-stats');
+    if (heroStats) {
+        const statsObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        statsObserver.observe(heroStats);
+    }
+    
+    // ============================================
+    // FORM HANDLING
+    // ============================================
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            const requiredFields = ['firstName', 'lastName', 'email', 'phone'];
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                const input = this.querySelector(`[name="${field}"]`);
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.style.borderColor = '#ef4444';
+                } else {
+                    input.style.borderColor = '#e2e8f0';
+                }
+            });
+            
+            // Email validation
+            const emailInput = this.querySelector('[name="email"]');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (emailInput.value && !emailRegex.test(emailInput.value)) {
+                isValid = false;
+                emailInput.style.borderColor = '#ef4444';
+            }
+            
+            if (isValid) {
+                // Simulate form submission
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Request Sent!';
+                    submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #34d399 100%)';
+                    
+                    // Reset form after delay
+                    setTimeout(() => {
+                        this.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.style.background = '';
+                        submitBtn.disabled = false;
+                        
+                        // Show success message
+                        showNotification('Thank you! We will contact you within 24 hours to confirm your appointment.', 'success');
+                    }, 2000);
+                }, 1500);
+            } else {
+                showNotification('Please fill in all required fields correctly.', 'error');
+            }
+        });
+        
+        // Remove error styling on input
+        const inputs = contactForm.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('input', function() {
+                this.style.borderColor = '#e2e8f0';
+            });
+            
+            input.addEventListener('focus', function() {
+                this.style.borderColor = '#0077b6';
+            });
+            
+            input.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.style.borderColor = '#e2e8f0';
+                }
+            });
+        });
+    }
+    
+    // ============================================
+    // NOTIFICATION SYSTEM
+    // ============================================
+    function showNotification(message, type = 'info') {
+        // Remove existing notification
+        const existing = document.querySelector('.notification');
+        if (existing) {
+            existing.remove();
+        }
+        
+        // Create notification element
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.innerHTML = `
+            <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-circle' : 'fa-info-circle'}"></i>
+            <span>${message}</span>
+            <button class="notification-close"><i class="fas fa-times"></i></button>
+        `;
+        
+        // Add styles
+        notification.style.cssText = `
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            background: ${type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#0077b6'};
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            animation: slideInRight 0.3s ease;
+            font-size: 0.9375rem;
+            max-width: 400px;
+        `;
+        
+        // Add close button styles
+        const closeBtn = notification.querySelector('.notification-close');
+        closeBtn.style.cssText = `
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 4px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        `;
+        
+        closeBtn.addEventListener('mouseenter', () => closeBtn.style.opacity = '1');
+        closeBtn.addEventListener('mouseleave', () => closeBtn.style.opacity = '0.8');
+        closeBtn.addEventListener('click', () => {
+            notification.style.animation = 'slideOutRight 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+        });
+        
+        document.body.appendChild(notification);
+        
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+            if (notification.parentElement) {
+                notification.style.animation = 'slideOutRight 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }
+        }, 5000);
+    }
+    
+    // Add notification animations to document
+    const notificationStyles = document.createElement('style');
+    notificationStyles.textContent = `
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideOutRight {
+            from {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            to {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+        }
+        
+        /* Mobile menu styles */
+        @media (max-width: 992px) {
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                display: none;
+                gap: 0;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links a {
+                padding: 15px 20px;
+                border-radius: 8px;
+            }
+            
+            .mobile-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            
+            .mobile-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .mobile-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
+        }
+    `;
+    document.head.appendChild(notificationStyles);
+    
+    // ============================================
+    // PARALLAX EFFECT FOR HERO
+    // ============================================
+    const heroImage = document.querySelector('.image-wrapper');
+    
+    if (heroImage && window.innerWidth > 992) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            heroImage.style.transform = `translateY(${scrolled * 0.1}px)`;
+        });
+    }
+    
+    // ============================================
+    // LAZY LOADING FOR IMAGES (Future Implementation)
+    // ============================================
+    // Placeholder for when real images are added
+    const lazyImages = document.querySelectorAll('[data-src]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        lazyImages.forEach(img => imageObserver.observe(img));
+    }
+    
+    // ============================================
+    // KEYBOARD NAVIGATION
+    // ============================================
+    document.addEventListener('keydown', function(e) {
+        // Close mobile menu on Escape
+        if (e.key === 'Escape') {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
+        }
+    });
+    
+    // ============================================
+    // SCROLL TO TOP FUNCTIONALITY
+    // ============================================
+    // Create scroll to top button
+    const scrollTopBtn = document.createElement('button');
+    scrollTopBtn.className = 'scroll-top-btn';
+    scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
+    scrollTopBtn.style.cssText = `
+        position: fixed;
+        bottom: 24px;
+        left: 24px;
+        width: 48px;
+        height: 48px;
+        background: linear-gradient(135deg, #0077b6 0%, #00a8e8 100%);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 119, 182, 0.3);
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+    `;
+    
+    document.body.appendChild(scrollTopBtn);
+    
+    // Show/hide scroll to top button
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 500) {
+            scrollTopBtn.style.opacity = '1';
+            scrollTopBtn.style.visibility = 'visible';
+        } else {
+            scrollTopBtn.style.opacity = '0';
+            scrollTopBtn.style.visibility = 'hidden';
+        }
+    });
+    
+    scrollTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    scrollTopBtn.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-4px)';
+        this.style.boxShadow = '0 6px 20px rgba(0, 119, 182, 0.4)';
+    });
+    
+    scrollTopBtn.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 4px 15px rgba(0, 119, 182, 0.3)';
+    });
+    
+    console.log('Weybridge Eye Clinic - Page Loaded Successfully');
+});
